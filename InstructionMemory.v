@@ -4,7 +4,7 @@ module InstructionMemory#(
 )(
     input [4:0] currentAddress,
     input readInstruction,
-    output reg [WIDTH-1:0] instruction
+    output logic [WIDTH-1:0] instruction
 );
 
 
@@ -16,10 +16,6 @@ module InstructionMemory#(
         end
     end
 
-
-    initial begin
-         // add instructions from somewhere
-    end
 
 
 endmodule

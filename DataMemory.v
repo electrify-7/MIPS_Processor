@@ -7,7 +7,7 @@ module DataMemory#(
     input write,
     input [4:0] memoryAddress,
     input [REGSIZE-1:0] writeValue,
-    output reg [REGSIZE-1:0] readValue
+    output logic [REGSIZE-1:0] readValue
 );
 
     reg [REGSIZE-1:0] memory [0:31];

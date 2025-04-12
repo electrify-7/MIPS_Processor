@@ -4,12 +4,15 @@ module ProgramCounter #(
     input clk,
     input reset,
     input [WIDTH-1:0] nextAddress,
-    output reg [WIDTH-1:0] currentAddress
+    output logic [WIDTH-1:0] currentAddress
 );
 
     always @(posedge clk) begin
         if(reset) currentAddress <= 5'b0;
-        else currentAddress <= nextAddress;
+        else begin 
+            $display("Program Counter: %b", currentAddress);
+            currentAddress <= nextAddress;
+        end
     end
 
 

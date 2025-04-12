@@ -3,11 +3,11 @@ module AluControl#(
     parameter REGSIZE = 32
 )(
     input [5:0] opcode,
-    input [REGSIZE-1:0] firstOperand,
-    input [REGSIZE-1:0] secondOperand,
+    input signed [REGSIZE-1:0] firstOperand,
+    input signed [REGSIZE-1:0] secondOperand,
     input [5:0] funct,
-    output [REGSIZE-1:0] result,
-    output logic zeroFlag
+    output reg signed [REGSIZE-1:0] result,
+    output wire zeroFlag
 );
 
         // R type instructions : (opcode (6) | rs (5) | rt (5) | rd (5) | shamt (5) | funct (6) )

@@ -8,8 +8,8 @@ module RegisterFile#(
     input [REGSIZE-1:0] writeAddress,
     input [REGSIZE-1:0] readAddressFirst,
     input [REGSIZE-1:0] readAddressSecond,
-    output reg [WIDTH-1:0] readValueFirst,
-    output reg [WIDTH-1:0] readValueSecond
+    output logic [WIDTH-1:0] readValueFirst,
+    output logic [WIDTH-1:0] readValueSecond
 );
 
     reg [WIDTH-1:0] registerFile [0:(1<<REGSIZE)-1];

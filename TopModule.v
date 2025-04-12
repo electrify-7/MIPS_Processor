@@ -5,8 +5,9 @@ module TopModule#(
     input reset
 );
 
+
     // start program counter
-    logic [4:0] currentAddress, nextAddress; // for instruction memory
+    wire [4:0] currentAddress, nextAddress; // for instruction memory
     ProgramCounter pc_instance(
         .clk(clk),
         .reset(reset),
@@ -18,8 +19,8 @@ module TopModule#(
 
     // start instruction memory
 
-    logic [WIDTH-1:0] instruction;
-    logic readInstruction = 1;
+    wire [WIDTH-1:0] instruction;
+    wire readInstruction = 1;
     InstructionMemory mem_instance(
         .currentAddress(currentAddress),
         .readInstruction(readInstruction),
@@ -40,7 +41,7 @@ module TopModule#(
     assign immediate = instruction[15:0];
 
 
-    logic RegDst, ALUSrc, MemToReg, RegWrite, MemRead, MemWrite, Branch, Jump,Jal;
+    wire RegDst, ALUSrc, MemToReg, RegWrite, MemRead, MemWrite, Branch, Jump,Jal;
 
     Control control_instance(
         .clk(clk),
@@ -58,9 +59,9 @@ module TopModule#(
     );
 
     // use register-file to get idk stuff?
-    logic [WIDTH-1:0] readValueFirst, readValueSecond, writeData;
-    logic [4:0] readAddressFirst, readAddressSecond, writeRegister;
-    logic writeEnable;
+    wire signed [WIDTH-1:0] readValueFirst, readValueSecond, writeData;
+    wire signed [4:0] readAddressFirst, readAddressSecond, writeRegister;
+    wire writeEnable;
 
     assign writeEnable = RegWrite;
     assign readAddressFirst = rs;
@@ -82,9 +83,9 @@ module TopModule#(
     );
 
     // pass off to ALU
-    logic [4:0] secondOperand;
-    logic [WIDTH-1:0] result;
-    logic zeroFlag;
+    wire signed [31:0] secondOperand;
+    wire signed [WIDTH-1:0] result;
+    wire zeroFlag;
     
     // choosing between immediate and rt for alu:
     assign secondOperand = ALUSrc ? {{16{immediate[15]}}, immediate} : readValueSecond; //   ------------------->> .
@@ -103,9 +104,9 @@ module TopModule#(
     );
 
 
-    logic [WIDTH-1:0] writeValue, readValue;
+    wire signed [WIDTH-1:0] writeValue, readValue;
     /////////// MEM ERROR FIX DAWG ///////////
-    logic [4:0]memoryAddress;
+    wire [4:0] memoryAddress;
     assign memoryAddress = result[4:0]; 
 
 
@@ -128,7 +129,7 @@ module TopModule#(
 
 
     // BEQ variables:
-    wire [4:0] signed branch_offset = $signed(immediate[4:0]);
+    wire signed [4:0] branch_offset = $signed(immediate[4:0]);
     wire[4:0] branch_target = currentAddress + 1 + branch_offset;
 
     // Jump variables:
