@@ -77,28 +77,64 @@ brew install --cask gtkwave
 
 ## Instruction Set Architecture (ISA)
 
-| Instruction Type | Format | Details |
-|------------------|--------|---------|
-| **R-Type** | `opcode (6) | rs (5) | rt (5) | rd (5) | shamt (5) | funct (6)` |  
-Opcode: `000000`  
-Funct Codes:  
-• `000000` – ADD  
-• `000001` – SUB  
-• `000010` – AND  
-• `000011` – OR  
-• `000100` – SLT  
-|
-| **I-Type** | `opcode (6) | rs (5) | rt (5) | immediate (16)` |  
-Opcodes:  
-• `000100` – LW  
-• `000101` – SW  
-• `000110` – BEQ  
-|
-| **J-Type** | `opcode (6) | address (26)` |  
-Opcodes:  
-• `000010` – JUMP  
-• `000011` – JAL  
-|
+<table style="width:100%; border-collapse: collapse; margin-bottom: 1rem;">
+  <thead>
+    <tr style="background-color: #f8f8f8;">
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Instruction Type</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Format</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- R-Type Row -->
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><strong>R-Type</strong></td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-family: monospace; vertical-align: top;">
+        opcode (6) | rs (5) | rt (5) | rd (5) | shamt (5) | funct (6)
+      </td>
+      <td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+        <strong>Opcode:</strong> <code>000000</code><br>
+        <strong>Funct Codes:</strong>
+        <ul style="margin: 0; padding-left: 1.2rem;">
+          <li>ADD: <code>000000</code></li>
+          <li>SUB: <code>000001</code></li>
+          <li>AND: <code>000010</code></li>
+          <li>OR:  <code>000011</code></li>
+          <li>SLT: <code>000100</code></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- I-Type Row -->
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><strong>I-Type</strong></td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-family: monospace; vertical-align: top;">
+        opcode (6) | rs (5) | rt (5) | immediate (16)
+      </td>
+      <td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+        <strong>Opcodes:</strong>
+        <ul style="margin: 0; padding-left: 1.2rem;">
+          <li>LW:  <code>000100</code></li>
+          <li>SW:  <code>000101</code></li>
+          <li>BEQ: <code>000110</code></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- J-Type Row -->
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><strong>J-Type</strong></td>
+      <td style="border: 1px solid #ddd; padding: 8px; font-family: monospace; vertical-align: top;">
+        opcode (6) | address (26)
+      </td>
+      <td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+        <strong>Opcodes:</strong>
+        <ul style="margin: 0; padding-left: 1.2rem;">
+          <li>JUMP: <code>000010</code></li>
+          <li>JAL:  <code>000011</code></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
