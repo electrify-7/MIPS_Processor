@@ -12,22 +12,22 @@ module AluControl#(
 
         // R type instructions : (opcode (6) | rs (5) | rt (5) | rd (5) | shamt (5) | funct (6) )
         // Let opcode be 000000 (0); Funct:-
-            // ADD : 000000
-            // SUB : 000001
-            // AND : 000010
-            // OR  : 000011
-            // SLT : 000100
+        //     ADD : 000000
+        //     SUB : 000001
+        //     AND : 000010
+        //     OR  : 000011
+        //     SLT : 000100
 
         // I type instructions : (opcode (6) | rs (5) | rt (5) | immediate (16) )
         // opcodes for lw,sw,beq:
-            // LW  : 000100 (4)
-            // SW  : 000101 (5)
-            // BEQ : 000110 (6)
+        //     LW  : 000100 (4)
+        //     SW  : 000101 (5)
+        //     BEQ : 000110 (6)
 
         // J type instructions : (opcode (6) | jump address (26) )
         // opcode for Jump/Jal:
-            // Jump : 000010 (2)
-            // JAL  : 000011 (3)
+        //     Jump : 000010 (2)
+        //     JAL  : 000011 (3)
 
 
     always@(*) begin
