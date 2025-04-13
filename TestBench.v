@@ -76,6 +76,8 @@ always #5 clk = ~clk;
 
 
 
+
+
         $finish;
     end
 

@@ -24,7 +24,6 @@ module RegisterFile#(
     always @(posedge clk) begin
         if (writeEnable) begin
             registerFile[writeAddress] <= writeValue;
-          //  $display("Write Value: %d", writeValue);
 
         end
     end
