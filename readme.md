@@ -163,7 +163,7 @@ MIPS_Processor/
 
 ---
 
-## 📬 Contact
+##  Contact
 
 Feel free to open issues or submit pull requests.  
 **GitHub:** [electrify-7](https://github.com/electrify-7)
