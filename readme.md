@@ -58,7 +58,7 @@ brew install --cask gtkwave
 1. **Compile the Verilog files:**
 
     ```bash
-    iverilog -o mips_simulation top_module.v other_modules.v
+    iverilog -o output AluControl.v Control.v DataMemory.v InstructionMemory.v ProgramCounter.v RegisterFile.v TestBench.v TopModule.v
     ```
 
 2. **Execute the simulation:**
