@@ -14,7 +14,7 @@ This project features a **behavioral-level Verilog implementation** of a simplif
 ---
 ### Attribution
 
-The images used in this document are sourced from [https://www.cise.ufl.edu/~mssz/CompOrg/CDA-proc.html](https://www.cise.ufl.edu/~mssz/CompOrg/CDA-proc.html). For more details and an excellent resource to study MIPS processors, please visit the abovementioned UwU!
+The images used in this document are sourced from [https://www.cise.ufl.edu/~mssz/CompOrg/CDA-proc.html](https://www.cise.ufl.edu/~mssz/CompOrg/CDA-proc.html). For more details and an excellent resource to study MIPS processors, please visit the abovementioned!
 
 ---
 
