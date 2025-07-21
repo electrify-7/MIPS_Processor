@@ -54,10 +54,10 @@ module Control#(
                 ALUSrc   = 0;     // Second ALU operand comes from register.
                 MemToReg = 0;     // Write ALU result. (Final stage in WB ed of diagram)
                 RegWrite = 1;     // Enable register write. 
-                MemRead  = 0;     // no use :(
-                MemWrite = 0;     // no use :(
-                Branch   = 0;     // no use :(
-                Jump     = 0;     // no use :(
+                MemRead  = 0;     // no use 
+                MemWrite = 0;     // no use
+                Branch   = 0;     // no use 
+                Jump     = 0;     // no use
                 Jal      = 0;
             end
             6'b000100 : begin // lw
@@ -66,52 +66,52 @@ module Control#(
                 MemToReg = 1;     // Write data from memory.
                 RegWrite = 1;     // Enable register write.
                 MemRead  = 1;     // Enable memory read.
-                MemWrite = 0;     // no use :(
-                Branch   = 0;     // no use :(
-                Jump     = 0;     // no use :(
+                MemWrite = 0;     // no use
+                Branch   = 0;     // no use
+                Jump     = 0;     // no use
                 Jal      = 0;
             end
             6'b000101 : begin // sw
-                RegDst   = 0;     // no use :(
+                RegDst   = 0;     // no use
                 ALUSrc   = 1;     // Use immediate for address.
-                MemToReg = 0;     // no use :(
-                RegWrite = 0;     // no use :(
-                MemRead  = 0;     // no use :(
+                MemToReg = 0;     // no use
+                RegWrite = 0;     // no use 
+                MemRead  = 0;     // no use 
                 MemWrite = 1;     // Enable memory write.
-                Branch   = 0;     // no use :(
-                Jump     = 0;     // no use :(
+                Branch   = 0;     // no use 
+                Jump     = 0;     // no use 
                 Jal      = 0;
             end
             6'b000110 : begin // beq
-                RegDst   = 0;     // no use :(
+                RegDst   = 0;     // no use 
                 ALUSrc   = 0;     // Second ALU operand comes from register. ( rs == rt condition )
-                MemToReg = 0;     // no use :(
-                RegWrite = 0;     // no use :(
-                MemRead  = 0;     // no use :(
-                MemWrite = 0;     // no use :(
+                MemToReg = 0;     // no use 
+                RegWrite = 0;     // no use 
+                MemRead  = 0;     // no use 
+                MemWrite = 0;     // no use 
                 Branch   = 1;     // Enable branch.
-                Jump     = 0;     // no use :(
+                Jump     = 0;     // no use 
                 Jal      = 0;
             end
             6'b000010 : begin // jump
-            RegDst   = 0;     // no use :(
-            ALUSrc   = 0;     // no use :(
-            MemToReg = 0;     // no use :(
-            RegWrite = 0;     // no use :(
-            MemRead  = 0;     // no use :(
-            MemWrite = 0;     // no use :(
-            Branch   = 0;     // no use :(
+            RegDst   = 0;     // no use 
+            ALUSrc   = 0;     // no use 
+            MemToReg = 0;     // no use 
+            RegWrite = 0;     // no use 
+            MemRead  = 0;     // no use 
+            MemWrite = 0;     // no use 
+            Branch   = 0;     // no use 
             Jump     = 1;     // Enable jump.
             Jal      = 0;
             end
             6'b000011 : begin // jal
             RegDst   = 0;     // no use.
-            ALUSrc   = 0;     // no use :(
-            MemToReg = 0;     // no use :(
+            ALUSrc   = 0;     // no use 
+            MemToReg = 0;     // no use 
             RegWrite = 1;     // store in last register
-            MemRead  = 0;     // no use :(
-            MemWrite = 0;     // no use :(
-            Branch   = 0;     // no use :(
+            MemRead  = 0;     // no use 
+            MemWrite = 0;     // no use 
+            Branch   = 0;     // no use 
             Jump     = 1;     // next address to be immediate 26
             Jal      = 1;     // Jump and link.
             end
