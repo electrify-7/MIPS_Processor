@@ -8,14 +8,6 @@ This project features a **behavioral-level Verilog implementation** of a simplif
 ### Flow Diagram  
 ![Flow Diagram](/images/Screenshot%202025-04-13%20at%2011.36.17 AM.png)
 
-### FSM Diagram  
-![FSM Diagram](/images/Screenshot%202025-04-13%20at%2011.35.51 AM.png)
-
----
-### Attribution
-
-The images used in this document are sourced from [https://www.cise.ufl.edu/~mssz/CompOrg/CDA-proc.html](https://www.cise.ufl.edu/~mssz/CompOrg/CDA-proc.html). For more details and an excellent resource to study MIPS processors, please visit the abovementioned!
-
 ---
 
 ## To setup:
