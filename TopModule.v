@@ -58,7 +58,7 @@ module TopModule#(
         .Jal(Jal)
     );
 
-    // use register-file to get idk stuff?
+    // use register-file to get vlues.
     wire signed [WIDTH-1:0] readValueFirst, readValueSecond, writeData;
     wire signed [4:0] readAddressFirst, readAddressSecond, writeRegister;
     wire writeEnable;
@@ -105,7 +105,7 @@ module TopModule#(
 
 
     wire signed [WIDTH-1:0] writeValue, readValue;
-    /////////// MEM ERROR FIX DAWG ///////////
+    
     wire [4:0] memoryAddress;
     assign memoryAddress = result[4:0]; 
 
